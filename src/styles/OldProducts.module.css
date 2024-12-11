@@ -1,0 +1,99 @@
+.container {
+  font-family: 'Pixelify Sans', 'Courier New', Courier, monospace; /* Updated font */
+  background-color: #f5deb3; /* Wheat color */
+  color: #000;
+  padding: 20px;
+  min-height: 100vh;
+  border: 2px solid #333;
+  background-image: linear-gradient(45deg, #fff8dc 25%, #f5deb3 25%, #f5deb3 50%, #fff8dc 50%, #fff8dc 75%, #f5deb3 75%);
+  background-size: 40px 40px; /* Retro checkerboard pattern */
+}
+
+.header {
+  text-align: center;
+  border-bottom: 4px double #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-family: 'Pixelify Sans', monospace; /* Retro font for header */
+  color: #8b0000; /* Dark red for vintage vibe */
+  text-shadow: 2px 2px #d3d3d3;
+  animation: blink 1s infinite; /* Add blinking effect */
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.productCard {
+  border: 2px dashed #333;
+  padding: 10px;
+  width: min-content;
+  background-color: #ffe4b5; /* Old-school light tan */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  font-family: 'Pixelify Sans', monospace; /* Consistent retro font */
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.productCard h2 {
+  font-size: 1.2rem;
+  font-family: 'Pixelify Sans', monospace; /* Retro font for card titles */
+  color: #800000; /* Maroon */
+  margin-bottom: 10px;
+}
+
+.productCard p {
+  font-size: 0.9rem;
+  font-family: 'Pixelify Sans', monospace; /* Retro font for descriptions */
+  margin-bottom: 10px;
+}
+
+.productCard .price {
+  font-weight: bold;
+  color: #ff4500; /* OrangeRed for retro contrast */
+  font-family: 'Pixelify Sans', monospace; /* Retro font for price */
+}
+
+.footer {
+  text-align: center;
+  border-top: 4px double #333;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 0.8rem;
+  font-family: 'Pixelify Sans', monospace; /* Retro font for footer */
+}
+
+/* Retro animations */
+@keyframes blink {
+  50% {
+      opacity: 0.5;
+  }
+}
+
+.imageTint {
+  filter: sepia(50%) brightness(0.9);
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  font-family: 'Pixelify Sans', monospace; /* Retro font for marquee */
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}

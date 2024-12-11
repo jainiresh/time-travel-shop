@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { DevCycleClientsideProvider } from "@devcycle/nextjs-sdk";
+import { getClientContext } from "./devcycle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,8 +21,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
+        <DevCycleClientsideProvider context={getClientContext()}>
         {children}
+        </DevCycleClientsideProvider>
       </body>
     </html>
   );
